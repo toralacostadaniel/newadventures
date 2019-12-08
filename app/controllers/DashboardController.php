@@ -11,10 +11,17 @@ class DashboardController extends BaseController {
         $measurementsSensorTwo = SensorTwo::latest()->take($limit)->get();
         $measurementsSensorThree = SensorThree::latest()->take($limit)->get();
 
+        $lastMeasurementSensorOne = SensorOne::latest()->first();
+        $lastMeasurementSensorTwo = SensorTwo::latest()->first();
+        $lastMeasurementSensorThree = SensorThree::latest()->first();
+
         return $this->renderHTML('dashboard.twig', [
             'measurementsSensorOne' => $measurementsSensorOne,
             'measurementsSensorTwo' => $measurementsSensorTwo,
-            'measurementsSensorThree' => $measurementsSensorThree
+            'measurementsSensorThree' => $measurementsSensorThree,
+            'lastMeasurementSensorOne' => $lastMeasurementSensorOne,
+            'lastMeasurementSensorTwo' => $lastMeasurementSensorTwo,
+            'lastMeasurementSensorThree' => $lastMeasurementSensorThree
         ]);
     }
 }
