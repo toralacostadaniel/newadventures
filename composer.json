@@ -6,6 +6,7 @@
     },
     "require": {
         "twig/twig": "^3.0",
-        "illuminate/database": "^6.6"
+        "illuminate/database": "^6.6",
+        "zendframework/zend-diactoros": "^2.2"
     }
 }
