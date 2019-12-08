@@ -11,77 +11,18 @@
     <link rel="stylesheet" href="assets/css/Data-Table.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="border rounded-0 d-flex d-xl-flex justify-content-center justify-content-xl-center" style="height: 180px;background-color: #f5f5f5;"><img class="d-xl-flex" src="assets/img/fcfm.png" style="width: 265.8px;height: 120.75px;margin-top: 20px;"></div>
+    <div class="border rounded-0 d-flex d-xl-flex justify-content-center justify-content-xl-center" style="height: 180px;background-color: #f5f5f5;">
+        <img class="d-xl-flex" src="assets/img/fcfm.png" alt="FCFM logo" style="width: 265.8px;height: 120.75px;margin-top: 20px;">
+    </div>
     <div class="card-deck" style="padding: 50px;">
-        <div class="card">
-            <div class="card-body"><i class="icon ion-android-pin d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-bottom: 10px;font-size: 48px;"></i>
-                <h4 class="text-center card-title">Ubicación 1</h4>
-                <div class="card-group flex-column">
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-top: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Dióxido de carbono</h5>
-                        </div>
-                    </div>
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Temperatura</h5>
-                        </div>
-                    </div>
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Humedad</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body"><i class="icon ion-android-pin d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-bottom: 10px;font-size: 48px;"></i>
-                <h4 class="text-center card-title">Ubicación 2</h4>
-                <div class="card-group flex-column">
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-top: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Dióxido de carbono</h5>
-                        </div>
-                    </div>
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Temperatura</h5>
-                        </div>
-                    </div>
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Humedad</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body"><i class="icon ion-android-pin d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-bottom: 10px;font-size: 48px;"></i>
-                <h4 class="text-center card-title">Ubicación 3</h4>
-                <div class="card-group flex-column">
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-top: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Dióxido de carbono</h5>
-                        </div>
-                    </div>
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Temperatura</h5>
-                        </div>
-                    </div>
-                    <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                        <div class="card-body">
-                            <h5 class="card-title">Humedad</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% block statusSensorOne %} {% endblock %}
+        {% block statusSensorTwo %} {% endblock %}
+        {% block statusSensorThree %} {% endblock %}
     </div>
     <div class="card-group" style="padding: 50px;">
         <div class="card">
@@ -111,6 +52,8 @@
             <p class="copyright">CICFIM, FCFM, UANL © 2019</p>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
