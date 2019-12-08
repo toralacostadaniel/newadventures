@@ -27,7 +27,7 @@ $capsule->bootEloquent();
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
 $map->get('index', '/newadventures/', [
-    'controller' => 'app/controllers/DashboardController',
+    'controller' => 'app\controllers\DashboardController',
     'action' => 'dashboardAction'
 ]);
 
