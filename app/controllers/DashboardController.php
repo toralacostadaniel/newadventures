@@ -11,9 +11,9 @@ class DashboardController extends BaseController {
         $measurementsSensorTwo = SensorTwo::latest()->take($limit)->get();
         $measurementsSensorThree = SensorThree::latest()->take($limit)->get();
 
-        $lastMeasurementSensorOne = SensorOne::latest()->first();
-        $lastMeasurementSensorTwo = SensorTwo::latest()->first();
-        $lastMeasurementSensorThree = SensorThree::latest()->first();
+        $lastMeasurementSensorOne = SensorOne::latest('id')->first();
+        $lastMeasurementSensorTwo = SensorTwo::latest('id')->first();
+        $lastMeasurementSensorThree = SensorThree::latest('id')->first();
 
         return $this->renderHTML('dashboard.twig', [
             'measurementsSensorOne' => $measurementsSensorOne,
