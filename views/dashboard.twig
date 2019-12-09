@@ -6,23 +6,68 @@
 
 {% block statusSensorOne %}
 <div class="card">
-    <div class="card-body"><i class="icon ion-android-pin d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-bottom: 10px;font-size: 48px;"></i>
+    <div class="card-body">
+        <div class="rounded-0 d-flex d-xl-flex justify-content-center justify-content-xl-center" style="margin-bottom: 10px;">
+            <img class="d-xl-flex" src="../newadventures/public/assets/map.png" alt="FCFM logo" style="width: 50px;height: 50px;">
+        </div>
         <h4 class="text-center card-title">Ubicación 1</h4>
         <div class="card-group flex-column">
             <div class="card border rounded" style="margin-bottom: 10px;margin-top: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Dióxido de carbono</h5>
-                </div>
+                {% if lastMeasurementSensorOne.co2_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% elseif lastMeasurementSensorOne.co2_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% elseif lastMeasurementSensorOne.co2_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% endif %}
             </div>
             <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Temperatura</h5>
-                </div>
+                {% if lastMeasurementSensorOne.temperature_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% elseif lastMeasurementSensorOne.temperature_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% elseif lastMeasurementSensorOne.temperature_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% endif %}
             </div>
             <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Humedad</h5>
-                </div>
+                {% if lastMeasurementSensorOne.humidity_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% elseif lastMeasurementSensorOne.humidity_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% elseif lastMeasurementSensorOne.humidity_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% endif %}
             </div>
        </div>
     </div>
@@ -31,23 +76,68 @@
 
 {% block statusSensorTwo %}
 <div class="card">
-    <div class="card-body"><i class="icon ion-android-pin d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-bottom: 10px;font-size: 48px;"></i>
+    <div class="card-body">
+        <div class="rounded-0 d-flex d-xl-flex justify-content-center justify-content-xl-center" style="margin-bottom: 10px;">
+            <img class="d-xl-flex" src="../newadventures/public/assets/map.png" alt="FCFM logo" style="width: 50px;height: 50px;">
+        </div>
         <h4 class="text-center card-title">Ubicación 2</h4>
         <div class="card-group flex-column">
             <div class="card border rounded" style="margin-bottom: 10px;margin-top: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Dióxido de carbono</h5>
-                </div>
+                {% if lastMeasurementSensorTwo.co2_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% elseif lastMeasurementSensorTwo.co2_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% elseif lastMeasurementSensorTwo.co2_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% endif %}
             </div>
             <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Temperatura</h5>
-                </div>
+                {% if lastMeasurementSensorTwo.temperature_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% elseif lastMeasurementSensorTwo.temperature_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% elseif lastMeasurementSensorTwo.temperature_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% endif %}
             </div>
             <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Humedad</h5>
-                </div>
+                {% if lastMeasurementSensorTwo.humidity_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% elseif lastMeasurementSensorTwo.humidity_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% elseif lastMeasurementSensorTwo.humidity_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -56,23 +146,68 @@
 
 {% block statusSensorThree %}
 <div class="card">
-    <div class="card-body"><i class="icon ion-android-pin d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-bottom: 10px;font-size: 48px;"></i>
+    <div class="card-body">
+        <div class="rounded-0 d-flex d-xl-flex justify-content-center justify-content-xl-center" style="margin-bottom: 10px;">
+            <img class="d-xl-flex" src="../newadventures/public/assets/map.png" alt="FCFM logo" style="width: 50px;height: 50px;">
+        </div>
         <h4 class="text-center card-title">Ubicación 3</h4>
         <div class="card-group flex-column">
             <div class="card border rounded" style="margin-bottom: 10px;margin-top: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Dióxido de carbono</h5>
-                </div>
+                {% if lastMeasurementSensorThree.co2_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% elseif lastMeasurementSensorThree.co2_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% elseif lastMeasurementSensorThree.co2_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Dióxido de carbono</h5>
+                    </div>
+                {% endif %}
             </div>
             <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Temperatura</h5>
-                </div>
+                {% if lastMeasurementSensorThree.temperature_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% elseif lastMeasurementSensorThree.temperature_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% elseif lastMeasurementSensorThree.temperature_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Temperatura</h5>
+                    </div>
+                {% endif %}
             </div>
             <div class="card border rounded" style="margin-bottom: 10px;margin-left: 10px;">
-                <div class="card-body">
-                    <h5 class="card-title">Humedad</h5>
-                </div>
+                {% if lastMeasurementSensorThree.humidity_status == 1 %}
+                    <div class="card-body" style="background-color: #1CC88A;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% elseif lastMeasurementSensorThree.humidity_status == 0 %}
+                    <div class="card-body" style="background-color: #F6C23E;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% elseif lastMeasurementSensorThree.humidity_status == -1 %}
+                    <div class="card-body" style="background-color: #E74A3B;">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% else %}
+                    <div class="card-body">
+                        <h5 class="card-title">Humedad</h5>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -90,12 +225,12 @@
         </tr>
     </thead>
     <tbody>
-        {% for measurement in measurementsOne %}
+        {% for measurement in measurementsSensorOne %}
             <tr>
                 <td>{{ measurement.co2 }}</td>
                 <td>{{ measurement.temperature }}</td>
                 <td>{{ measurement.humidity }}</td>
-                <td>{{ measurement.time }}</td>
+                <td>{{ measurement.created_at }}</td>
             </tr>
         {% endfor %}
     </tbody>
@@ -113,12 +248,12 @@
         </tr>
     </thead>
     <tbody>
-        {% for measurement in measurementsTwo %}
+        {% for measurement in measurementsSensorTwo %}
         <tr>
             <td>{{ measurement.co2 }}</td>
             <td>{{ measurement.temperature }}</td>
             <td>{{ measurement.humidity }}</td>
-            <td>{{ measurement.time }}</td>
+            <td>{{ measurement.created_at }}</td>
         </tr>
         {% endfor %}
     </tbody>
@@ -137,12 +272,12 @@
         </tr>
     </thead>
     <tbody>
-        {% for measurement in measurementsThree %}
+        {% for measurement in measurementsSensorThree %}
             <tr>
                 <td>{{ measurement.co2 }}</td>
                 <td>{{ measurement.temperature }}</td>
                 <td>{{ measurement.humidity }}</td>
-                <td>{{ measurement.time }}</td>
+                <td>{{ measurement.created_at }}</td>
             </tr>
         {% endfor %}
     </tbody>
