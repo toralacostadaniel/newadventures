@@ -5,14 +5,17 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
 use Zend\Diactoros\Response\RedirectResponse;
 
+$dotenv = Dotenv\Dotenv::createMutable(__DIR__ . '/..');
+$dotenv->load();
+
 $capsule = new Capsule;
 
 $capsule->addConnection([
-    'driver'    => 'mysql',
-    'host'      => 'localhost',
-    'database'  => 'newadventures',
-    'username'  => 'root',
-    'password'  => '',
+    'driver'    => getenv('DATABASE_DRIVER'),
+    'host'      => getenv('DATABASE_HOST'),
+    'database'  => getenv('DATABASE_NAME'),
+    'username'  => getenv('DATABASE_USER'),
+    'password'  => getenv('DATABASE_PASS'),
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
