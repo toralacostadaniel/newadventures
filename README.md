@@ -4,7 +4,7 @@
 
 
 <div>
-<img src="http://www.fcfm.uanl.mx/sites/default/files/fcfmLogo_0.png"/>
+<img src="https://www.fcfm.uanl.mx/front/assets/images/resources/fcfm.png"/>
 </div>
 
 
